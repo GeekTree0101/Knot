@@ -2,7 +2,11 @@ use_frameworks!
 
 target 'Knot_Example' do
   pod 'Knot', :path => '../'
-
+  pod 'Texture'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'BonMot'
+  
   target 'Knot_Tests' do
     inherit! :search_paths
 
