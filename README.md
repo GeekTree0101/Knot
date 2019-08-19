@@ -122,6 +122,18 @@ You can get state without event
   Observable.just(100).state(from: node) // state
 ```
 
+> Example
+```swift
+let testNode = TestNode()
+
+testNode.rx.tap
+   .state(from: testNode)
+   .subscribe(onNext: { state in 
+     // TODO
+   })
+   .disposed(by: testNode.disposeBag)
+```
+
 ## Requirements
 - Xcode 10.x
 - Swift 5.x
