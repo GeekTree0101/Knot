@@ -61,19 +61,18 @@ final class ViewController: ASViewController<ASDisplayNode> {
   }
 }
 
-struct NodeState: KnotState {
-  
-  var title: String
-  var subTitle: String
-  
-  static func defaultState() -> NodeState {
-    return .init(title: "-", subTitle: "-")
-  }
-}
 
 class Node: ASDisplayNode & Knotable {
   
-  typealias State = NodeState
+  struct State: KnotState {
+    
+    var title: String
+    var subTitle: String
+    
+    static func defaultState() -> State {
+      return .init(title: "-", subTitle: "-")
+    }
+  }
   
   private enum Const {
     static let titleStyle: StringStyle = .init(.font(UIFont.boldSystemFont(ofSize: 30.0)), .color(.gray))

@@ -15,6 +15,7 @@ public protocol Knotable: class, KnotAssociatedObject {
 
 private var knotKey: String = "knot.knotKey"
 private var knotStreamKey: String = "knot.knotStreamKey"
+private var disposeBagKey: String = "knot.disposeBagKey"
 
 extension Knotable {
   
@@ -25,6 +26,18 @@ extension Knotable {
   public func sink(_ state: State) {
     self.update(state)
     self._knot.accept(state)
+  }
+  
+  public var disposeBag: DisposeBag {
+    get {
+      return associatedObject(
+        forKey: &disposeBagKey,
+        default: DisposeBag()
+      )
+    }
+    set {
+      setAssociatedObject(newValue, forKey: &disposeBagKey)
+    }
   }
 }
 
