@@ -5,10 +5,17 @@
 [![License](https://img.shields.io/cocoapods/l/Knot.svg?style=flat)](https://cocoapods.org/pods/Knot)
 [![Platform](https://img.shields.io/cocoapods/p/Knot.svg?style=flat)](https://cocoapods.org/pods/Knot)
 
+## Intro
+- Lightweight & Predictable (Rx dep only)
+- You can easy to separate presentation logic from business logic. 
+- KnotState will make your presentation logic as reusability.
+- Support a disposeBag (Just inherit knotable, you don't needs make a disposeBag property :) )
+- Efficient updating node layout with state stream.
+
 ## API Guide
 
 ### Knotable
-
+Knotable will make your node as **predictable state driven node** 
 
 #### Knotable & KnotState
 By inheriting **Knotable**, you can design as a responsive node.
