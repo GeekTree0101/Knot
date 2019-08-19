@@ -11,6 +11,9 @@
 
 
 #### Knotable & KnotState
+By inheriting **Knotable**, you can design as a responsive node.
+
+> Example
 ```swift
 
 class Node: ASDisplayNode & Knotable {
@@ -43,15 +46,42 @@ class Node: ASDisplayNode & Knotable {
 }
 ```
 
+State objects can be **separated to the outside**.
+> Example
+```swift
+struct SomeState: KnotState {
+  
+    var displayTitle: String
+  
+    static func defaultState() -> State {
+      return .init(displayTitle: "-")
+    }
+}
+
+class Node: ASDisplayNode & Knotable {
+
+  typealias State = SomeState
+
+  let titleNode = ASTextNode()
+
+  public func update(_ state: State) {
+  
+    titleNode.update({
+      $0.attributedText = NSAttributedString(string: state.displayTitle)
+    })
+  }
+}
+```
+
 #### Sink
-You can set state directly
+You can set state directly as sink:
 ```swift
 let node = KnotableNode()
 node.sink(State.init(...))
 ```
 
 #### Stream
-You can set state from observable. In this case, you don't needs call setNeedsLayout :)
+You can set state from observable with stream property. In this case, you don't needs call setNeedsLayout :)
 ```swift
 Observable.just(State.init(...)).bind(to: node.stream)
 ```
