@@ -39,6 +39,10 @@ extension Knotable {
       setAssociatedObject(newValue, forKey: &disposeBagKey)
     }
   }
+  
+  public var stateObservable: Observable<State> {
+    return _knot.asObservable()
+  }
 }
 
 extension Knotable {
@@ -53,10 +57,6 @@ extension Knotable {
     set {
       setAssociatedObject(newValue, forKey: &knotKey)
     }
-  }
-  
-  internal var stateObservable: Observable<State> {
-    return _knot.asObservable()
   }
 }
 
