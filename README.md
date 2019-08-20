@@ -210,7 +210,23 @@ Observable.just(State.init(...)).bind(to: node.stream)
 ### ObservableType convenience extension APIs
 
 #### pipe(to: KnotableNode)
-You can reduce knotable node state with event
+If observable or subject element is KnotSate then you can just use **pipe(to:)**
+it equal to **bind(to: knotableNode.stream)**
+```swift
+  let node: Knotable & SomeNode = .init(...)
+
+  Observable.just(State.init(...))
+    .pipe(to: node)
+    .disposed(by: disposeBag)
+    
+  // equal 
+  
+  Observable.just(State.init(...))
+    .bind(to: node.stream)
+    .disposed(by: disposeBag)
+```
+
+Alternatively, You can reduce knotable node state with event
 ```swift
   Observable.just(100)
     .pipe(to: node, {
