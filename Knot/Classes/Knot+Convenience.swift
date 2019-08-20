@@ -99,6 +99,24 @@ extension ObservableType {
   }
 }
 
+extension ObservableType {
+  
+  /**
+   Pipe(to:) is bind to stream with knotable state event element
+   
+   - Returns:
+   will return Disposable, you have to set disposed(by:).
+   
+   - Parameters:
+   - node: Knotable ASDisplayNode or subclass.
+   
+   - Important:
+   Event element must be a KnotState
+   */
+  public func pipe<K: Knotable & ASDisplayNode>(to node: K) -> Disposable where K.State == Self.Element {
+    return self.bind(to: node.stream)
+  }
+}
 
 public protocol KnotUpdater { }
 
