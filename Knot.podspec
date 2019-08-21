@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Knot'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'Lightweight & Predictable state driven node extension library'
 
   s.description      = 'Knot is lightweight & predictable state driven node extension library for Texture(AsyncDisplayKit)'
