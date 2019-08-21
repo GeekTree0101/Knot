@@ -1,3 +1,10 @@
+//
+//  Knotable.swift
+//
+//  Created by Geektree0101.
+//  Copyright © 2019 Geektree0101. All rights reserved.
+//
+    
 import AsyncDisplayKit
 import RxSwift
 import RxCocoa
@@ -10,7 +17,7 @@ public protocol KnotState {
 public protocol Knotable: class, KnotAssociatedObject {
   
   associatedtype State: KnotState
-  func update(_ state: State)
+  func update(_ state: Self.State)
 }
 
 private var knotKey: String = "knot.knotKey"

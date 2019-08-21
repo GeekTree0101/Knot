@@ -1,8 +1,8 @@
 //
 //  Knot+Convenience.swift
-//  Knot
 //
-//  Created by Hyeon su Ha on 16/08/2019.
+//  Created by Geektree0101.
+//  Copyright © 2019 Geektree0101. All rights reserved.
 //
 
 import AsyncDisplayKit
@@ -18,8 +18,8 @@ extension ObservableType {
    will return Disposable, you have to set disposed(by:).
    
    - Parameters:
-     - node: Knotable ASDisplayNode or subclass.
-     - sink: Reduce closure.
+   - node: Knotable ASDisplayNode or subclass.
+   - sink: Reduce closure.
    
    - Important:
    you have to reduce state with return new state as immutable.

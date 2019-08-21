@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* KnotSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* KnotSpec.swift */; };
 		92596BA9D5C0A7BD378D8FF5 /* Pods_Knot_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E72DFB0FAFC287A2ABB43E1 /* Pods_Knot_Tests.framework */; };
 		D3FCAA469705A6B2839759EC /* Pods_Knot_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC1D7A11A1918F2CEB1285D /* Pods_Knot_Example.framework */; };
+		DA936713230C2C7C00210C32 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA936712230C2C7C00210C32 /* SettingViewController.swift */; };
+		DA936715230C2C8A00210C32 /* SettingBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA936714230C2C8A00210C32 /* SettingBloc.swift */; };
+		DA936717230C2C9400210C32 /* SettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA936716230C2C9400210C32 /* SettingRepository.swift */; };
+		DA936719230C2CA000210C32 /* SettingLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA936718230C2CA000210C32 /* SettingLocalDataSource.swift */; };
+		DA93671B230C2CAB00210C32 /* SettingCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93671A230C2CAB00210C32 /* SettingCellNode.swift */; };
+		DA93671D230C2DCF00210C32 /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93671C230C2DCF00210C32 /* UIImage+Ex.swift */; };
+		DA93671F230C331F00210C32 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93671E230C331F00210C32 /* Setting.swift */; };
+		DA936722230CC92200210C32 /* SettingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA936721230CC92200210C32 /* SettingUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +42,6 @@
 		607FACD01AFB9204008FA782 /* Knot_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Knot_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Knot_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Knot_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +51,14 @@
 		B2B1A6E52B26B2113D62F47A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CF27D3C46BFEF5EE3573F03C /* Knot.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Knot.podspec; path = ../Knot.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D74C0A505A64A303218695DE /* Pods-Knot_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knot_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Knot_Tests/Pods-Knot_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA936712230C2C7C00210C32 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		DA936714230C2C8A00210C32 /* SettingBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBloc.swift; sourceTree = "<group>"; };
+		DA936716230C2C9400210C32 /* SettingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepository.swift; sourceTree = "<group>"; };
+		DA936718230C2CA000210C32 /* SettingLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingLocalDataSource.swift; sourceTree = "<group>"; };
+		DA93671A230C2CAB00210C32 /* SettingCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCellNode.swift; sourceTree = "<group>"; };
+		DA93671C230C2DCF00210C32 /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
+		DA93671E230C331F00210C32 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		DA936721230CC92200210C32 /* SettingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +105,9 @@
 		607FACD21AFB9204008FA782 /* Example for Knot */ = {
 			isa = PBXGroup;
 			children = (
+				DA936720230CC4FD00210C32 /* Extension */,
+				DA936711230C2C5B00210C32 /* Setting */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -143,6 +158,28 @@
 				1E72DFB0FAFC287A2ABB43E1 /* Pods_Knot_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA936711230C2C5B00210C32 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				DA936712230C2C7C00210C32 /* SettingViewController.swift */,
+				DA936714230C2C8A00210C32 /* SettingBloc.swift */,
+				DA936721230CC92200210C32 /* SettingUseCase.swift */,
+				DA936716230C2C9400210C32 /* SettingRepository.swift */,
+				DA936718230C2CA000210C32 /* SettingLocalDataSource.swift */,
+				DA93671A230C2CAB00210C32 /* SettingCellNode.swift */,
+				DA93671E230C331F00210C32 /* Setting.swift */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		DA936720230CC4FD00210C32 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DA93671C230C2DCF00210C32 /* UIImage+Ex.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		E85B1A55395B2F19ADF88AB9 /* Pods */ = {
@@ -335,11 +372,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Knot_Example/Pods-Knot_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BonMot/BonMot.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Knot/Knot.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa-Texture/RxCocoa_Texture.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources-Texture/RxDataSources_Texture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
@@ -347,11 +387,14 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BonMot.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Knot.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa_Texture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources_Texture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
@@ -368,8 +411,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				DA936722230CC92200210C32 /* SettingUseCase.swift in Sources */,
+				DA936715230C2C8A00210C32 /* SettingBloc.swift in Sources */,
+				DA93671B230C2CAB00210C32 /* SettingCellNode.swift in Sources */,
+				DA93671D230C2DCF00210C32 /* UIImage+Ex.swift in Sources */,
+				DA936719230C2CA000210C32 /* SettingLocalDataSource.swift in Sources */,
+				DA936717230C2C9400210C32 /* SettingRepository.swift in Sources */,
+				DA936713230C2C7C00210C32 /* SettingViewController.swift in Sources */,
+				DA93671F230C331F00210C32 /* Setting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
