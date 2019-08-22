@@ -14,13 +14,15 @@
 		92596BA9D5C0A7BD378D8FF5 /* Pods_Knot_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E72DFB0FAFC287A2ABB43E1 /* Pods_Knot_Tests.framework */; };
 		D3FCAA469705A6B2839759EC /* Pods_Knot_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC1D7A11A1918F2CEB1285D /* Pods_Knot_Example.framework */; };
 		DA936713230C2C7C00210C32 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA936712230C2C7C00210C32 /* SettingViewController.swift */; };
-		DA936715230C2C8A00210C32 /* SettingBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA936714230C2C8A00210C32 /* SettingBloc.swift */; };
+		DA936715230C2C8A00210C32 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA936714230C2C8A00210C32 /* SettingPresenter.swift */; };
 		DA936717230C2C9400210C32 /* SettingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA936716230C2C9400210C32 /* SettingRepository.swift */; };
 		DA936719230C2CA000210C32 /* SettingLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA936718230C2CA000210C32 /* SettingLocalDataSource.swift */; };
 		DA93671B230C2CAB00210C32 /* SettingCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93671A230C2CAB00210C32 /* SettingCellNode.swift */; };
 		DA93671D230C2DCF00210C32 /* UIImage+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93671C230C2DCF00210C32 /* UIImage+Ex.swift */; };
 		DA93671F230C331F00210C32 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA93671E230C331F00210C32 /* Setting.swift */; };
-		DA936722230CC92200210C32 /* SettingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA936721230CC92200210C32 /* SettingUseCase.swift */; };
+		DA936722230CC92200210C32 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA936721230CC92200210C32 /* SettingViewModel.swift */; };
+		DA936726230EA45500210C32 /* SettingListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA936725230EA45500210C32 /* SettingListNode.swift */; };
+		DA93672A230EA73900210C32 /* ASTableNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA936729230EA73900210C32 /* ASTableNode+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,13 +54,15 @@
 		CF27D3C46BFEF5EE3573F03C /* Knot.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Knot.podspec; path = ../Knot.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D74C0A505A64A303218695DE /* Pods-Knot_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Knot_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Knot_Tests/Pods-Knot_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA936712230C2C7C00210C32 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		DA936714230C2C8A00210C32 /* SettingBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBloc.swift; sourceTree = "<group>"; };
+		DA936714230C2C8A00210C32 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
 		DA936716230C2C9400210C32 /* SettingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRepository.swift; sourceTree = "<group>"; };
 		DA936718230C2CA000210C32 /* SettingLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingLocalDataSource.swift; sourceTree = "<group>"; };
 		DA93671A230C2CAB00210C32 /* SettingCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCellNode.swift; sourceTree = "<group>"; };
 		DA93671C230C2DCF00210C32 /* UIImage+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ex.swift"; sourceTree = "<group>"; };
 		DA93671E230C331F00210C32 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
-		DA936721230CC92200210C32 /* SettingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUseCase.swift; sourceTree = "<group>"; };
+		DA936721230CC92200210C32 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		DA936725230EA45500210C32 /* SettingListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListNode.swift; sourceTree = "<group>"; };
+		DA936729230EA73900210C32 /* ASTableNode+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ASTableNode+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,13 +167,9 @@
 		DA936711230C2C5B00210C32 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				DA936712230C2C7C00210C32 /* SettingViewController.swift */,
-				DA936714230C2C8A00210C32 /* SettingBloc.swift */,
-				DA936721230CC92200210C32 /* SettingUseCase.swift */,
-				DA936716230C2C9400210C32 /* SettingRepository.swift */,
-				DA936718230C2CA000210C32 /* SettingLocalDataSource.swift */,
-				DA93671A230C2CAB00210C32 /* SettingCellNode.swift */,
-				DA93671E230C331F00210C32 /* Setting.swift */,
+				DA936727230EA65000210C32 /* Domain */,
+				DA936724230EA3C400210C32 /* Adapter */,
+				DA936723230EA3BD00210C32 /* View */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -178,8 +178,38 @@
 			isa = PBXGroup;
 			children = (
 				DA93671C230C2DCF00210C32 /* UIImage+Ex.swift */,
+				DA936729230EA73900210C32 /* ASTableNode+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		DA936723230EA3BD00210C32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA93671A230C2CAB00210C32 /* SettingCellNode.swift */,
+				DA936725230EA45500210C32 /* SettingListNode.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA936724230EA3C400210C32 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				DA936714230C2C8A00210C32 /* SettingPresenter.swift */,
+				DA936712230C2C7C00210C32 /* SettingViewController.swift */,
+				DA936721230CC92200210C32 /* SettingViewModel.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		DA936727230EA65000210C32 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DA936716230C2C9400210C32 /* SettingRepository.swift */,
+				DA936718230C2CA000210C32 /* SettingLocalDataSource.swift */,
+				DA93671E230C331F00210C32 /* Setting.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		E85B1A55395B2F19ADF88AB9 /* Pods */ = {
@@ -372,14 +402,13 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Knot_Example/Pods-Knot_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BonMot/BonMot.framework",
-				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/DeepDiff/DeepDiff.framework",
 				"${BUILT_PRODUCTS_DIR}/Knot/Knot.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa-Texture/RxCocoa_Texture.framework",
-				"${BUILT_PRODUCTS_DIR}/RxDataSources-Texture/RxDataSources_Texture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
@@ -387,14 +416,13 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BonMot.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeepDiff.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Knot.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa_Texture.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources_Texture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
@@ -411,11 +439,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA936726230EA45500210C32 /* SettingListNode.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				DA936722230CC92200210C32 /* SettingUseCase.swift in Sources */,
-				DA936715230C2C8A00210C32 /* SettingBloc.swift in Sources */,
+				DA936722230CC92200210C32 /* SettingViewModel.swift in Sources */,
+				DA936715230C2C8A00210C32 /* SettingPresenter.swift in Sources */,
 				DA93671B230C2CAB00210C32 /* SettingCellNode.swift in Sources */,
 				DA93671D230C2DCF00210C32 /* UIImage+Ex.swift in Sources */,
+				DA93672A230EA73900210C32 /* ASTableNode+Extension.swift in Sources */,
 				DA936719230C2CA000210C32 /* SettingLocalDataSource.swift in Sources */,
 				DA936717230C2C9400210C32 /* SettingRepository.swift in Sources */,
 				DA936713230C2C7C00210C32 /* SettingViewController.swift in Sources */,

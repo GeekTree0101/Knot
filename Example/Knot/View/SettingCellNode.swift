@@ -12,6 +12,8 @@ import RxCocoa_Texture
 
 class SettingCellNode: ASCellNode & Knotable {
   
+  typealias State = SettingViewModel.CellState
+  
   private enum Const {
     
     static let titleStyle: StringStyle = .init(
@@ -19,8 +21,6 @@ class SettingCellNode: ASCellNode & Knotable {
       .color(.darkGray)
     )
   }
-  
-  typealias State = SettingUseCase.CellState
   
   let titleNode: ASTextNode = {
     let node = ASTextNode.init()
@@ -51,6 +51,7 @@ class SettingCellNode: ASCellNode & Knotable {
   }
   
   func update(_ state: State) {
+    
     titleNode.update({
       $0.attributedText = state.displayTitle.styled(with: Const.titleStyle)
     })
