@@ -44,9 +44,7 @@ class SettingListNode: ASDisplayNode & Knotable {
   }
   
   func update(_ state: State) {
-    
-    print("DEBUG* 1: \(state.items.count) \(state.changeSet.count)")
-    
+
     self.tableNode.reload(changes: state.changeSet, completion: { [weak self] in
       self?.batchContext?.completeBatchFetching($0)
     })
@@ -72,7 +70,6 @@ extension SettingListNode: ASTableDataSource {
   }
   
   func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
-    print("DEBUG* 2: \(state?.items.count)")
     return state?.items.count ?? 0
   }
   
