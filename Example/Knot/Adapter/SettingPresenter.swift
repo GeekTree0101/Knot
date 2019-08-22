@@ -12,9 +12,9 @@ import DeepDiff
 
 class SettingPresenter {
 
-  public let updateCellState: PublishRelay<SettingViewModel.CellState> = .init()
-  public let listStateRelay: BehaviorRelay<SettingViewModel.ListState> =
-    .init(value: SettingViewModel.ListState.defaultState())
+  public let updateCellState: PublishRelay<SettingCellNode.State> = .init()
+  public let listStateRelay: BehaviorRelay<SettingListNode.State> =
+    .init(value: SettingListNode.State.defaultState())
   
   public var repository: SettingRepository = .init(
     localDS: SettingLocalDataSource.init()
@@ -27,15 +27,15 @@ class SettingPresenter {
     repository.settings
       .reduce(listStateRelay, {
         var (settings, state) = $0
-        let newItems: [SettingViewModel.CellState] = settings.map({
-          SettingViewModel.CellState(
+        let newItems: [SettingCellNode.State] = settings.map({
+          SettingCellNode.State(
             id: $0.id,
             displayTitle: $0.title,
             isEnable: $0.isEnable
           )
         })
-        state.items = newItems
         state.changeSet = diff(old: state.items, new: newItems)
+        state.items = newItems
         return state
       })
       .bind(to: listStateRelay)

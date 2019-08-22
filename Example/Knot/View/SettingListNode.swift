@@ -10,13 +10,30 @@ import RxSwift
 import RxCocoa
 import RxCocoa_Texture
 import Knot
+import DeepDiff
 
 class SettingListNode: ASDisplayNode & Knotable {
   
-  typealias State = SettingViewModel.ListState
+  struct State: KnotState {
+    
+    var displayNavigationBarTitle: String
+    
+    var changeSet: [Change<SettingCellNode.State>] = []
+    var items: [SettingCellNode.State] = []
+    
+    static func defaultState() -> State {
+      
+      return .init(
+        displayNavigationBarTitle: "Setting",
+        changeSet: [],
+        items: []
+      )
+    }
+  }
   
   public let tableNode: ASTableNode = .init()
   public weak var presenter: SettingPresenter?
+  private var batchContext: ASBatchContext?
   
   override init() {
     super.init()
@@ -26,11 +43,15 @@ class SettingListNode: ASDisplayNode & Knotable {
     self.tableNode.dataSource = self
   }
   
-  func update(_ state: SettingViewModel.ListState) {
+  func update(_ state: State) {
     
-    self.tableNode.reload(changes: state.changeSet, completion: { _ in
-      
+    print("DEBUG* 1: \(state.items.count) \(state.changeSet.count)")
+    
+    self.tableNode.reload(changes: state.changeSet, completion: { [weak self] in
+      self?.batchContext?.completeBatchFetching($0)
     })
+  
+    self.closestViewController?.title = state.displayNavigationBarTitle
   }
   
   override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
@@ -51,6 +72,7 @@ extension SettingListNode: ASTableDataSource {
   }
   
   func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
+    print("DEBUG* 2: \(state?.items.count)")
     return state?.items.count ?? 0
   }
   

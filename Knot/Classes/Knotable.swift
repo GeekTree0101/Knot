@@ -73,8 +73,8 @@ extension Knotable where Self: ASDisplayNode {
     get {
       let binder = Binder<State>.init(self, binding: { node, state in
         
-        node.update(state)
         node._knot.accept(state)
+        node.update(state)
         
         if node.isNodeLoaded == true {
           node.setNeedsLayout()

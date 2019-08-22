@@ -9,10 +9,20 @@ import AsyncDisplayKit
 import Knot
 import BonMot
 import RxCocoa_Texture
+import DeepDiff
 
 class SettingCellNode: ASCellNode & Knotable {
   
-  typealias State = SettingViewModel.CellState
+  struct State: KnotState {
+    
+    var id: Int
+    var displayTitle: String
+    var isEnable: Bool
+    
+    static func defaultState() -> State {
+      return .init(id: -1, displayTitle: "?", isEnable: false)
+    }
+  }
   
   private enum Const {
     
@@ -73,5 +83,19 @@ class SettingCellNode: ASCellNode & Knotable {
       insets: .init(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0),
       child: stackLayout
     )
+  }
+}
+
+extension SettingCellNode.State: DiffAware {
+  
+  typealias DiffId = Int
+  
+  var diffId: Int {
+    return id
+  }
+  
+  static func compareContent(_ a: SettingCellNode.State,
+                             _ b: SettingCellNode.State) -> Bool {
+    return a.diffId == b.diffId
   }
 }
