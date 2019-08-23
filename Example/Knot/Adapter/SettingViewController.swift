@@ -22,13 +22,4 @@ class SettingViewController: ASViewController<SettingListNode> {
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    presenter.listStateRelay
-      .pipe(to: node)
-      .disposed(by: self.node.disposeBag)
-  }
-  
 }

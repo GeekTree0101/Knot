@@ -43,6 +43,14 @@ class SettingListNode: ASDisplayNode & Knotable {
     self.tableNode.dataSource = self
   }
   
+  override func didLoad() {
+    super.didLoad()
+    
+    presenter?.listStateRelay
+      .pipe(to: self)
+      .disposed(by: disposeBag)
+  }
+  
   func update(_ state: State) {
 
     self.tableNode.reload(changes: state.changeSet, completion: { [weak self] in
